@@ -22,7 +22,7 @@ const NavBar = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
               <LinkContainer to="/login">
-                <Nav.Link> Login </Nav.Link>
+                <Nav.Link> Login</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/cart">
                 <Nav.Link> Cart {cartState.cartItems.length} </Nav.Link>

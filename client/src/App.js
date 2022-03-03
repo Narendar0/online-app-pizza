@@ -17,11 +17,11 @@ function App() {
         <TopBar />
         <NavBar/>
         <Switch>
-        <Route path="/about" component={About} exact />
-        <Route path="/contact" component={Contact} exact />
-        <Route path="/policy" component={Policy} exact />
-        <Route path="/" component={HomeScreen}  />
-        <Route path="/cart" component={CartScreen} exact />
+        <Route path="/" component={HomeScreen}  exact/>
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact}/>
+        <Route path="/policy" component={Policy}/>
+        <Route path="/cart" component={CartScreen}/>
         </Switch>
 
         </BrowserRouter>
