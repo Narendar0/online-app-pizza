@@ -11,7 +11,7 @@ const Pizza = ({pizza}) => {
 
   const dispatch = useDispatch()
 
-  const addToCartHandler =() =>{
+  const addToCartHandler = () => {
       dispatch(addToCart(pizza,quantity,varient))
   }
 
@@ -21,7 +21,7 @@ const Pizza = ({pizza}) => {
 
   return (
     <>
-      <Card style={{ width: '18rem', marginTop: "30px" }}>
+      <Card style={{ width: '25rem', marginTop: "30px" }}>
                 <Card.Img variant="top"
                     src={pizza.image}
                     style={{ height: '250px', cursor: 'pointer' }}

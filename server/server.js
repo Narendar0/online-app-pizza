@@ -20,8 +20,9 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 
-
+app.use('/api/users',require("./routes/userRoutes"));
 app.use('/api/pizzas', require('./routes/pizzaRoute'));
+app.use('/api/orders', require('./routes/orderRoute'));
 app.get("/" ,(req,res)=>{
     res.send("<h1>hello from node server via nodemon</h1>");
 })
@@ -30,6 +31,9 @@ app.get("/" ,(req,res)=>{
 
 const port = process.env.PORT || 8080
 app.listen(8080, ()=>{
-    console.log(`Server running on ${process.env.NODE_ENV} mode on port no ${process.env.PORT}`.bgMagenta.white);
-})
+    console.log(
+        `Server running on ${process.env.NODE_ENV} mode on port no ${process.env.PORT}`
+        .bgMagenta.white
+        );
+});
 

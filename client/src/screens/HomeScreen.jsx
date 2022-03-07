@@ -3,11 +3,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Pizza from '../components/Pizza';
 import {useSelector,useDispatch} from "react-redux";
 import {getAllPizzas} from '../actions/pizzaAction'
+import Loader from '../components/Loader';
+import Error from '../components/Error';
 
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
-  const pizzastate = useSelector(state => state.getAllPizzaReducer)
+  const pizzastate = useSelector((state) => state.getAllPizzaReducer)
   const {loading, pizzas ,error} =pizzastate
 
   useEffect(() =>{dispatch(getAllPizzas())} ,[dispatch])
@@ -16,8 +18,8 @@ const HomeScreen = () => {
     <Container>
     {
      
-        loading ? (<h1>Loading...</h1>)
-              : error ? (<h1>Error While Fetching pizzas</h1>)
+        loading ? (<Loader/>)
+              : error ? (<Error>Error while fetching pizzas{error}</Error>)
               : (<Row>
 
                 { pizzas.map((pizza) => (

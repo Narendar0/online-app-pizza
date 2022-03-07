@@ -10,7 +10,6 @@
     "data:import": "node seeder.js",
     "client": "npm start --prefix ../client",
     "dev": "concurrently \"npm run server\" \"npm run client"
-
   },
   "author": "naren",
   "license": "ISC",
@@ -22,7 +21,9 @@
     "express": "^4.17.3",
     "mongoose": "^6.2.4",
     "morgan": "^1.10.0",
-    "require-stack": "^1.0.2"
+    "require-stack": "^1.0.2",
+    "stripe": "^8.207.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
